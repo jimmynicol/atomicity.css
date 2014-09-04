@@ -465,7 +465,7 @@ a {
   background-color: rgba(255, 139, 93, 0.95);
   color: #e7eaed; }
 
-.f-b-primary, .f-b-hover-primary, [class*="prefixb-primary"], .f-hr-primary {
+.f-b-primary, .f-b-hover-primary, [class*="f-b-primary"], .f-hr-primary {
   border-color: #FF8B5D; }
 
 .f-fc-white, .f-fc-hover-white:hover {
@@ -495,7 +495,7 @@ a {
   background-color: rgba(255, 255, 255, 0.95);
   color: #5c5d5e; }
 
-.f-b-white, .f-b-hover-white, [class*="prefixb-white"], .f-hr-white {
+.f-b-white, .f-b-hover-white, [class*="f-b-white"], .f-hr-white {
   border-color: white; }
 
 .f-fc-xlight, .f-fc-hover-xlight:hover {
@@ -525,7 +525,7 @@ a {
   background-color: rgba(231, 234, 237, 0.95);
   color: #5c5d5e; }
 
-.f-b-xlight, .f-b-hover-xlight, [class*="prefixb-xlight"], .f-hr-xlight {
+.f-b-xlight, .f-b-hover-xlight, [class*="f-b-xlight"], .f-hr-xlight {
   border-color: #e7eaed; }
 
 .f-fc-light, .f-fc-hover-light:hover {
@@ -555,7 +555,7 @@ a {
   background-color: rgba(207, 210, 213, 0.95);
   color: #5c5d5e; }
 
-.f-b-light, .f-b-hover-light, [class*="prefixb-light"], .f-hr-light {
+.f-b-light, .f-b-hover-light, [class*="f-b-light"], .f-hr-light {
   border-color: #cfd2d5; }
 
 .f-fc-medium, .f-fc-hover-medium:hover {
@@ -585,7 +585,7 @@ a {
   background-color: rgba(184, 187, 189, 0.95);
   color: #5c5d5e; }
 
-.f-b-medium, .f-b-hover-medium, [class*="prefixb-medium"], .f-hr-medium {
+.f-b-medium, .f-b-hover-medium, [class*="f-b-medium"], .f-hr-medium {
   border-color: #b8bbbd; }
 
 .f-fc-dark, .f-fc-hover-dark:hover {
@@ -615,7 +615,7 @@ a {
   background-color: rgba(138, 140, 142, 0.95);
   color: #e7eaed; }
 
-.f-b-dark, .f-b-hover-dark, [class*="prefixb-dark"], .f-hr-dark {
+.f-b-dark, .f-b-hover-dark, [class*="f-b-dark"], .f-hr-dark {
   border-color: #8a8c8e; }
 
 .f-fc-xdark, .f-fc-hover-xdark:hover {
@@ -645,7 +645,7 @@ a {
   background-color: rgba(92, 93, 94, 0.95);
   color: #e7eaed; }
 
-.f-b-xdark, .f-b-hover-xdark, [class*="prefixb-xdark"], .f-hr-xdark {
+.f-b-xdark, .f-b-hover-xdark, [class*="f-b-xdark"], .f-hr-xdark {
   border-color: #5c5d5e; }
 
 .f-fc-black, .f-fc-hover-black:hover {
@@ -675,7 +675,7 @@ a {
   background-color: rgba(0, 0, 0, 0.95);
   color: #e7eaed; }
 
-.f-b-black, .f-b-hover-black, [class*="prefixb-black"], .f-hr-black {
+.f-b-black, .f-b-hover-black, [class*="f-b-black"], .f-hr-black {
   border-color: black; }
 
 .f-fc-swatchone, .f-fc-hover-swatchone:hover {
@@ -705,7 +705,7 @@ a {
   background-color: rgba(89, 202, 233, 0.95);
   color: #e7eaed; }
 
-.f-b-swatchone, .f-b-hover-swatchone, [class*="prefixb-swatchone"], .f-hr-swatchone {
+.f-b-swatchone, .f-b-hover-swatchone, [class*="f-b-swatchone"], .f-hr-swatchone {
   border-color: #59CAE9; }
 
 .f-fc-swatchtwo, .f-fc-hover-swatchtwo:hover {
@@ -735,7 +735,7 @@ a {
   background-color: rgba(206, 232, 197, 0.95);
   color: #5c5d5e; }
 
-.f-b-swatchtwo, .f-b-hover-swatchtwo, [class*="prefixb-swatchtwo"], .f-hr-swatchtwo {
+.f-b-swatchtwo, .f-b-hover-swatchtwo, [class*="f-b-swatchtwo"], .f-hr-swatchtwo {
   border-color: #CEE8C5; }
 
 .f-fc-swatchthree, .f-fc-hover-swatchthree:hover {
@@ -765,7 +765,7 @@ a {
   background-color: rgba(255, 139, 93, 0.95);
   color: #e7eaed; }
 
-.f-b-swatchthree, .f-b-hover-swatchthree, [class*="prefixb-swatchthree"], .f-hr-swatchthree {
+.f-b-swatchthree, .f-b-hover-swatchthree, [class*="f-b-swatchthree"], .f-hr-swatchthree {
   border-color: #FF8B5D; }
 
 .f-fc-swatchfour, .f-fc-hover-swatchfour:hover {
@@ -795,7 +795,7 @@ a {
   background-color: rgba(119, 127, 131, 0.95);
   color: #e7eaed; }
 
-.f-b-swatchfour, .f-b-hover-swatchfour, [class*="prefixb-swatchfour"], .f-hr-swatchfour {
+.f-b-swatchfour, .f-b-hover-swatchfour, [class*="f-b-swatchfour"], .f-hr-swatchfour {
   border-color: #777F83; }
 
 .f-fc-swatchfive, .f-fc-hover-swatchfive:hover {
@@ -825,7 +825,7 @@ a {
   background-color: rgba(43, 43, 63, 0.95);
   color: #e7eaed; }
 
-.f-b-swatchfive, .f-b-hover-swatchfive, [class*="prefixb-swatchfive"], .f-hr-swatchfive {
+.f-b-swatchfive, .f-b-hover-swatchfive, [class*="f-b-swatchfive"], .f-hr-swatchfive {
   border-color: #2B2B3F; }
 
 .f-fc-facebook, .f-fc-hover-facebook:hover {
@@ -855,7 +855,7 @@ a {
   background-color: rgba(57, 91, 152, 0.95);
   color: #e7eaed; }
 
-.f-b-facebook, .f-b-hover-facebook, [class*="prefixb-facebook"], .f-hr-facebook {
+.f-b-facebook, .f-b-hover-facebook, [class*="f-b-facebook"], .f-hr-facebook {
   border-color: #395b98; }
 
 .f-fc-twitter, .f-fc-hover-twitter:hover {
@@ -885,7 +885,7 @@ a {
   background-color: rgba(27, 165, 226, 0.95);
   color: #e7eaed; }
 
-.f-b-twitter, .f-b-hover-twitter, [class*="prefixb-twitter"], .f-hr-twitter {
+.f-b-twitter, .f-b-hover-twitter, [class*="f-b-twitter"], .f-hr-twitter {
   border-color: #1ba5e2; }
 
 .f-fc-google, .f-fc-hover-google:hover {
@@ -915,7 +915,7 @@ a {
   background-color: rgba(255, 0, 0, 0.95);
   color: #e7eaed; }
 
-.f-b-google, .f-b-hover-google, [class*="prefixb-google"], .f-hr-google {
+.f-b-google, .f-b-hover-google, [class*="f-b-google"], .f-hr-google {
   border-color: #ff0000; }
 
 .f-fc-linkedin, .f-fc-hover-linkedin:hover {
@@ -945,7 +945,7 @@ a {
   background-color: rgba(29, 135, 189, 0.95);
   color: #e7eaed; }
 
-.f-b-linkedin, .f-b-hover-linkedin, [class*="prefixb-linkedin"], .f-hr-linkedin {
+.f-b-linkedin, .f-b-hover-linkedin, [class*="f-b-linkedin"], .f-hr-linkedin {
   border-color: #1d87bd; }
 
 .f-fc-pinterest, .f-fc-hover-pinterest:hover {
@@ -975,7 +975,7 @@ a {
   background-color: rgba(203, 32, 39, 0.95);
   color: #e7eaed; }
 
-.f-b-pinterest, .f-b-hover-pinterest, [class*="prefixb-pinterest"], .f-hr-pinterest {
+.f-b-pinterest, .f-b-hover-pinterest, [class*="f-b-pinterest"], .f-hr-pinterest {
   border-color: #cb2027; }
 
 .f-fc-whats-app, .f-fc-hover-whats-app:hover {
@@ -1005,7 +1005,7 @@ a {
   background-color: rgba(96, 184, 45, 0.95);
   color: #e7eaed; }
 
-.f-b-whats-app, .f-b-hover-whats-app, [class*="prefixb-whats-app"], .f-hr-whats-app {
+.f-b-whats-app, .f-b-hover-whats-app, [class*="f-b-whats-app"], .f-hr-whats-app {
   border-color: #60B82D; }
 
 .f-fc-success, .f-fc-hover-success:hover {
@@ -1035,7 +1035,7 @@ a {
   background-color: rgba(0, 128, 0, 0.95);
   color: #e7eaed; }
 
-.f-b-success, .f-b-hover-success, [class*="prefixb-success"], .f-hr-success {
+.f-b-success, .f-b-hover-success, [class*="f-b-success"], .f-hr-success {
   border-color: green; }
 
 .f-fc-error, .f-fc-hover-error:hover {
@@ -1065,14 +1065,14 @@ a {
   background-color: rgba(255, 0, 0, 0.95);
   color: #e7eaed; }
 
-.f-b-error, .f-b-hover-error, [class*="prefixb-error"], .f-hr-error {
+.f-b-error, .f-b-hover-error, [class*="f-b-error"], .f-hr-error {
   border-color: red; }
 
-[class*='prefixbg-hover-'] {
+[class*='f-bg-hover-'] {
   -webkit-transition: background-color 150ms ease-in-out;
           transition: background-color 150ms ease-in-out; }
 
-[class*='prefixfc-hover-'] {
+[class*='f-fc-hover-'] {
   -webkit-transition: color 150ms ease-in-out;
           transition: color 150ms ease-in-out; }
 

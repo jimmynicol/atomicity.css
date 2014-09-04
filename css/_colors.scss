@@ -50,7 +50,7 @@ a {
     background-color: rgba($color, $opacity-xdark);
     color: color-invert($color);
   }
-  .#{$prefix}b-#{$key}, .#{$prefix}b-hover-#{$key}, [class*="#{prefix}b-#{$key}"], .#{$prefix}hr-#{$key} {
+  .#{$prefix}b-#{$key}, .#{$prefix}b-hover-#{$key}, [class*="#{$prefix}b-#{$key}"], .#{$prefix}hr-#{$key} {
     border-color: $color;
   }
 }
@@ -89,10 +89,10 @@ a {
 
 
 // Color effects
-[class*='#{prefix}bg-hover-'] {
+[class*='#{$prefix}bg-hover-'] {
   transition: background-color $background-fade;
 }
-[class*='#{prefix}fc-hover-'] {
+[class*='#{$prefix}fc-hover-'] {
   transition: color $hover-fade;
 }
 
