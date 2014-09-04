@@ -1,5 +1,8 @@
 # Atomicity.css
 
+A WORK IN PROGRESS
+
+
 Minimal CSS library using atomic css principles where a single class selector does one specific task.
 
 
