@@ -1,0 +1,147 @@
+// Background Utils
+.#{$prefix}bg-norepeat {
+  background-repeat: no-repeat;
+}
+.#{$prefix}bg-center {
+  background-position: center;
+}
+.#{$prefix}bg-cover {
+  background-size: cover;
+}
+.#{$prefix}bg-contain {
+  background-size: contain;
+}
+
+// Clearfix
+.#{$prefix}clearfix {
+  @include clearfix();
+}
+
+// Overflow
+.#{$prefix}of-hidden {
+  overflow: hidden;
+}
+.#{$prefix}of-hidden-x {
+  overflow-x: hidden;
+}
+.#{$prefix}of-hidden-y {
+  overflow-y: hidden;
+}
+.#{$prefix}of-scroll {
+  overflow: scroll;
+}
+.#{$prefix}of-scroll-x {
+  overflow-x: scroll;
+}
+.#{$prefix}of-scroll-y {
+  overflow-y: scroll;
+}
+.#{$prefix}of-visible {
+  overflow: visible;
+}
+.#{$prefix}of-visible-x {
+  overflow-x: visible;
+}
+.#{$prefix}of-visible-y {
+  overflow-y: visible;
+}
+
+// Border radius
+.#{$prefix}br-none {
+  border-radius: 0;
+}
+.#{$prefix}br-xsmall {
+  border-radius: 2px;
+}
+.#{$prefix}br-small {
+  border-radius: 3px;
+}
+.#{$prefix}br-medium {
+  border-radius: 6px;
+}
+.#{$prefix}br-large {
+  border-radius: 10px;
+}
+.#{$prefix}br-circle {
+  border-radius: 100%;
+}
+
+.#{$prefix}br-none-tl {
+  border-top-left-radius: 0;
+}
+.#{$prefix}br-none-tr {
+  border-top-right-radius: 0;
+}
+.#{$prefix}br-none-bl {
+  border-bottom-left-radius: 0;
+}
+.#{$prefix}br-none-br {
+  border-bottom-right-radius: 0;
+}
+
+
+// Cursor elements
+.#{$prefix}clickable {
+  cursor: pointer;
+}
+.#{$prefix}draggable {
+  cursor: move;
+}
+
+
+// Hover fadeIn/show
+// - need to place this class both on the component you want to hide/show and
+//   on its parent
+.#{$prefix}hover-fade-in {
+  .#{$prefix}hover-fade-in {
+    opacity: 0;
+    transition: opacity 250ms linear;
+  }
+}
+.#{$prefix}hover-fade-in:hover {
+  .#{$prefix}hover-fade-in {
+    opacity: 1;
+  }
+}
+.#{$prefix}hover-show {
+  .#{$prefix}hover-show {
+    display: none;
+  }
+}
+.#{$prefix}hover-show:hover {
+  .#{$prefix}hover-show {
+    display: block;
+  }
+}
+
+
+// File upload btn
+//   - note, this can not be applied to a button as it fails in FF
+.#{$prefix}upload-btn {
+  position: relative;
+  overflow: hidden;
+
+  input {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 200px;
+    direction: ltr;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+
+// Display States
+.#{$prefix}hide {
+  display: none !important;
+  visibility: hidden !important;
+}
+.#{$prefix}show {
+  display: block !important;
+}
+.#{$prefix}invisible {
+  visibility: hidden !important;
+}

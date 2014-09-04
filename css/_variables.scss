@@ -1,0 +1,144 @@
+// -------
+// General
+// -------
+
+$prefix:          'f-' !default;
+
+// -------
+// End General
+// -------
+
+
+
+// -------
+// Typography
+// -------
+
+$font-sans-serif:  Helvetica, Arial, sans-serif !default;
+$font-serif:       Georgia, Times, serif !default;
+$font-monospace:   Monaco, Menlo, "Courier New", monospace !default;
+$font-condensed:   $font-sans-serif !default;
+$font-italic:      $font-sans-serif !default;
+$font-base:        $font-sans-serif !default;
+$font-size:        14px;
+
+$line-height-base: 1.428571429 !default;
+
+$fs-xsmall:        10px !default;
+$fs-small:         12px !default;
+$fs-medium:        14px !default;
+$fs-large:         18px !default;
+$fs-xlarge:        24px !default;
+
+$fs-h1:            36px !default;
+$fs-h2:            30px !default;
+$fs-h3:            24px !default;
+$fs-h4:            18px !default;
+$fs-h5:            14px !default;
+$fs-h6:            12px !default;
+
+// -------
+// End Typography
+// -------
+
+
+// -------
+// Layout
+// -------
+
+// Page Container Width
+$page-container-width: 960px !default;
+
+// Number of grid columns
+$grid-columns:         12    !default;
+
+// Margins/Padding
+$spacing-xsmall:       8px   !default;
+$spacing-small:        14px  !default;
+$spacing-medium:       20px  !default;
+$spacing-large:        24px  !default;
+$spacing-xlarge:       36px  !default;
+
+// Z-indexes
+$z-1:                  1000  !default;
+$z-2:                  1001  !default;
+$z-3:                  1002  !default;
+$z-4:                  1003  !default;
+$z-5:                  1004  !default;
+$z-popup:              $z-4  !default;
+$z-top:                $z-5  !default;
+
+// -------
+// End Layout
+// -------
+
+
+// -------
+// Color
+// -------
+
+// Color Swatch
+$color-swatchone:    #59CAE9 !default;
+$color-swatchtwo:    #CEE8C5 !default;
+$color-swatchthree:  #FF8B5D !default;
+$color-swatchfour:   #777F83 !default;
+$color-swatchfive:   #2B2B3F !default;
+
+// White to Black
+$color-white:        white   !default;
+$color-xlight:       #e7eaed !default;
+$color-light:        #cfd2d5 !default;
+$color-medium:       #b8bbbd !default;
+$color-dark:         #8a8c8e !default;
+$color-xdark:        #5c5d5e !default;
+$color-black:        black   !default;
+
+// Social network brand colors
+$color-facebook:     #395b98 !default;
+$color-twitter:      #1ba5e2 !default;
+$color-google:       #ff0000 !default;
+$color-linkedin:     #1d87bd !default;
+$color-pinterest:    #cb2027 !default;
+$color-whats-app:    #60B82D !default;
+
+// Primary color
+$color-primary:      $color-swatchthree !default;
+
+// Application state colors
+$color-success:      green   !default;
+$color-error:        red     !default;
+
+// Links
+$color-link:         #252b2c !default;
+$color-link-hover:   #000000 !default;
+
+// Opacity
+$opacity-xlight:     0.25    !default;
+$opacity-light:      0.5     !default;
+$opacity-medium:     0.75    !default;
+$opacity-dark:       0.85    !default;
+$opacity-xdark:      0.95    !default;
+$opacity-full:       1       !default;
+
+// Fades
+$font-fade:          150ms ease-in-out !default;
+$background-fade:    150ms ease-in-out !default;
+$hover-fade:         150ms ease-in-out !default;
+
+
+// -------
+// End Color
+// -------
+
+
+// -------
+// Media Query Breakpoints
+// -------
+
+$screen-phone:    480px !default;
+$screen-tablet:   768px !default;
+$screen-desktop:  $page-container-width !default;
+
+// -------
+// End Media Query Breakpoints
+// -------

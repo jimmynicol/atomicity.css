@@ -1,0 +1,201 @@
+// Reset
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+// Font Families
+.#{$prefix}font-main {
+  font-family: $font-base;
+}
+.#{$prefix}font-condensed {
+  font-family: $font-condensed;
+}
+.#{$prefix}font-monospace {
+  font-family: $font-monospace;
+}
+.#{$prefix}font-sans-serif {
+  font-family: $font-sans-serif;
+}
+.#{$prefix}font-serif {
+  font-family: $font-serif;
+}
+.#{$prefix}font-italic {
+  font: {
+    family: $font-italic;
+    style: italic;
+  }
+}
+
+[class*='#{prefix}font'] {
+  &.italic {
+    style: italic;
+  }
+}
+
+
+// Font Reset
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: $font-base;
+  font-size: $font-size;
+  line-height: $line-height-base;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Font Sizes
+.#{$prefix}fs-xsmall {
+  font-size: $fs-xsmall;
+}
+.#{$prefix}fs-small {
+  font-size: $fs-small;
+}
+.#{$prefix}fs-medium {
+  font-size: $fs-medium;
+}
+.#{$prefix}fs-large {
+  font-size: $fs-large;
+}
+.#{$prefix}fs-xlarge {
+  font-size: $fs-xlarge;
+}
+
+
+// Font Weights
+.#{$prefix}fw-thin {
+  font-weight: 100;
+}
+.#{$prefix}fw-light {
+  font-weight: 300;
+}
+.#{$prefix}fw-normal {
+  font-weight: 400;
+}
+.#{$prefix}fw-medium {
+  font-weight: 500;
+}
+.#{$prefix}fw-bold {
+  font-weight: 700;
+}
+.#{$prefix}fw-ultrabold {
+  font-weight: 900;
+}
+
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-condensed;
+  font-weight: 700;
+}
+h1, .h1 {
+  font-size: $fs-h1;
+}
+h2, .h2 {
+  font-size: $fs-h2;
+}
+h3, .h3 {
+  font-size: $fs-h3;
+}
+h4, .h4 {
+  font-size: $fs-h4;
+}
+h5, .h5 {
+  font-size: $fs-h5;
+}
+h6, .h6 {
+  font-size: $fs-h6;
+}
+
+
+// Line Heights
+.#{$prefix}lh-xsmall {
+  line-height: 1;
+}
+.#{$prefix}lh-small {
+  line-height: 1.25;
+}
+.#{$prefix}lh-medium {
+  line-height: 1.5;
+}
+.#{$prefix}lh-large {
+  line-height: 1.75;
+}
+.#{$prefix}lh-xlarge {
+  line-height: 2;
+}
+.#{$prefix}lh-xxlarge {
+  line-height: 2.5;
+}
+
+
+// Links
+a {
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    // Default
+    outline: thin dotted #333;
+    // WebKit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+
+// Text Utilities
+.#{$prefix}text-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.#{$prefix}tl {
+  text-align: left;
+}
+.#{$prefix}tc {
+  text-align: center;
+}
+.#{$prefix}tr {
+  text-align: right;
+}
+
+.#{$prefix}caps {
+  text-transform: uppercase;
+}
+.#{$prefix}lower {
+  text-transform: lowercase;
+}
+.#{$prefix}normal-caps {
+  text-transform: none;
+}
+
+.#{$prefix}wordwrap-break {
+  word-wrap: break-word;
+}
+.#{$prefix}wordwrap-normal {
+  word-wrap: normal;
+}
+
+.#{$prefix}no-underline, a.#{$prefix}no-underline, a.#{$prefix}no-underline:hover {
+  text-decoration: none;
+}

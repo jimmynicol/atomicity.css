@@ -1,0 +1,313 @@
+// Reset the box sizing
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+iframe {
+  border: none;
+}
+
+
+// Page Container
+.#{$prefix}page-container {
+  width: $page-container-width;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+// Z-indexes
+.#{$prefix}z-1      { z-index: $z-1; }
+.#{$prefix}z-2      { z-index: $z-2; }
+.#{$prefix}z-3      { z-index: $z-3; }
+.#{$prefix}z-4      { z-index: $z-4; }
+.#{$prefix}z-5      { z-index: $z-5; }
+.#{$prefix}z-popup  { z-index: $z-popup; }
+.#{$prefix}z-top    { z-index: $z-top; }
+.#{$prefix}z-bottom { z-index: 1; }
+
+
+@mixin make-margin-padding-set($set, $dimension) {
+  .#{$prefix}m-#{$set} {
+    margin: $dimension;
+  }
+  .#{$prefix}m-x-#{$set} {
+    margin-left: $dimension;
+    margin-right: $dimension;
+  }
+  .#{$prefix}m-y-#{$set} {
+    margin-top: $dimension;
+    margin-bottom: $dimension;
+  }
+  .#{$prefix}m-l-#{$set} {
+    margin-left: $dimension;
+  }
+  .#{$prefix}m-r-#{$set} {
+    margin-right: $dimension;
+  }
+  .#{$prefix}m-t-#{$set} {
+    margin-top: $dimension;
+  }
+  .#{$prefix}m-b-#{$set} {
+    margin-bottom: $dimension;
+  }
+  .#{$prefix}p-#{$set} {
+    padding: $dimension;
+  }
+  .#{$prefix}p-x-#{$set} {
+    padding-left: $dimension;
+    padding-right: $dimension;
+  }
+  .#{$prefix}p-y-#{$set} {
+    padding-top: $dimension;
+    padding-bottom: $dimension;
+  }
+  .#{$prefix}p-l-#{$set} {
+    padding-left: $dimension;
+  }
+  .#{$prefix}p-r-#{$set} {
+    padding-right: $dimension;
+  }
+  .#{$prefix}p-t-#{$set} {
+    padding-top: $dimension;
+  }
+  .#{$prefix}p-b-#{$set} {
+    padding-bottom: $dimension;
+  }
+  .#{$prefix}content-spacing-#{$set} {
+    & > * {
+      margin-left: $dimension;
+    }
+    & > *:first-child {
+      margin-left: 0
+    }
+  }
+}
+
+
+// Margins and Padding Sets
+@include make-margin-padding-set(none,    0);
+@include make-margin-padding-set(xsmall,  $spacing-xsmall);
+@include make-margin-padding-set(small,   $spacing-small);
+@include make-margin-padding-set(medium,  $spacing-medium);
+@include make-margin-padding-set(large,   $spacing-large);
+@include make-margin-padding-set(xlarge,  $spacing-xlarge);
+
+
+// Borders
+[class*='#{$prefix}b-'] {
+  border-style: solid;
+  border-width: 1px;
+
+  &.two   { border-width: 2px; }
+  &.three { border-width: 3px; }
+  &.four  { border-width: 4px; }
+  &.five  { border-width: 5px; }
+
+  &.#{$prefix}b-l {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+  }
+  &.#{$prefix}b-r {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+  }
+  &.#{$prefix}b-t {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  &.#{$prefix}b-b {
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+
+  &.#{$prefix}b-nl {
+    border-left-width: 0px;
+  }
+  &.#{$prefix}b-nr {
+    border-right-width: 0px;
+  }
+  &.#{$prefix}b-nt {
+    border-top-width: 0px;
+  }
+  &.#{$prefix}b-nb {
+    border-bottom-width: 0px;
+  }
+}
+
+
+// Position
+.#{$prefix}pos-rel { position: relative; }
+.#{$prefix}pos-abs { position: absolute; }
+.#{$prefix}pos-fix { position: fixed; }
+
+
+// Display alignment
+[class*='#{$prefix}align-'] {
+  position: absolute;
+}
+.#{$prefix}align-tr {
+  top: 0;
+  right: 0;
+}
+.#{$prefix}align-tl {
+  top: 0;
+  left: 0;
+}
+.#{$prefix}align-br {
+  bottom: 0;
+  right: 0;
+}
+.#{$prefix}align-bl {
+  bottom: 0;
+  left: 0;
+}
+.#{$prefix}align-t {
+  top: 0;
+}
+.#{$prefix}align-b {
+  bottom: 0;
+}
+.#{$prefix}align-l {
+  left: 0;
+}
+.#{$prefix}align-r {
+  right: 0;
+}
+.#{$prefix}align-c {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+.#{$prefix}align-tc {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+.#{$prefix}align-bc {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.#{$prefix}fullbleed {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.#{$prefix}fullbleed-fixed {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+// Basic positioning (ie: no assumptions on positioning type)
+.#{$prefix}top-left     { top: 0; left: 0 }
+.#{$prefix}top-right    { top: 0; right: 0 }
+.#{$prefix}bottom-left  { bottom: 0; left: 0 }
+.#{$prefix}bottom-right { bottom: 0; right: 0 }
+
+
+// Floats
+.#{$prefix}fl { float: left; }
+.#{$prefix}fr { float: right; }
+.#{$prefix}fn { float: none; }
+
+
+// Misc.
+.#{$prefix}width-100 { width: 100%; }
+.#{$prefix}maxwidth-100 { max-width: 100%; }
+.#{$prefix}height-100 { height: 100%; }
+.#{$prefix}maxheight-100 { max-height: 100%; }
+
+
+.#{$prefix}db { display: block; }
+.#{$prefix}ilb {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+
+// Horizontal rules (the colors are mixed into the color sets)
+[class*='#{$prefix}hr'] {
+  height: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.#{$prefix}hr {
+  border-color: $color-light;
+}
+
+// Flexbox utilities
+//
+// these pages are very helpful in understanding flexbox:
+//    - http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+//    - http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+// make a container flexible
+.#{$prefix}flex { display: flex }
+
+// align children of a parent element in the x and y directions
+.#{$prefix}flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.#{$prefix}flex-center-y {
+  display: flex;
+  align-items: center;
+}
+.#{$prefix}flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+// use to right align a child of a flex-center, flex-center-y
+.#{$prefix}flex-align-right { margin-left: auto; }
+
+// make all children of flex to fill the vertical space
+.#{$prefix}flex-children-stretch { align-items: stretch }
+
+// make the children of flex fill horizontal space, with first element on the
+// left edge, and the last child on the right edge. Apply this in addition to
+// flex
+.#{$prefix}flex-children-spread { justify-content: space-between }
+
+// left or right align all children of flex
+.#{$prefix}flex-children-l { justify-content: flex-start }
+.#{$prefix}flex-children-r { justify-content: flex-end }
+
+// align children of flex to top or bottom of parent
+.#{$prefix}flex-children-t { align-items: flex-start }
+.#{$prefix}flex-children-b { align-items: flex-end }
+
+// apply to a flex child to make it fill the available space, useful for
+// instance when you need the center element to fill the space while the first
+// and last elements set to their respective edges.
+.#{$prefix}flex-self-expand { flex: 1 }
+
+// apply to flex child to fill vertical space
+.#{$prefix}flex-self-stretch { align-self: stretch }
+
+// individually align a flex child in the y direction
+.#{$prefix}flex-self-t { align-self: flex-start }
+.#{$prefix}flex-self-b { align-self: flex-end }
+.#{$prefix}flex-self-c { align-self: center }

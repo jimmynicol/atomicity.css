@@ -1,0 +1,39 @@
+{
+  "name": "atomicity",
+  "version": "0.0.1",
+  "description": "Atomic CSS library, packaged for use with NPM, Grunt and Gulp",
+  "main": "index.js",
+  "homepage": "https://github.com/jimmynicol/atomicity.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jimmynicol/atomicity.css.git"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "CSS",
+    "atomic",
+    "Grunt",
+    "Gulp"
+  ],
+  "author": "James Nicol",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer-core": "^3.0.1",
+    "chai": "^1.9.1",
+    "chalk": "^0.5.1",
+    "clean-css": "^2.2.15",
+    "gulp": "^3.8.7",
+    "gulp-bump": "^0.1.11",
+    "gulp-jshint": "^1.8.4",
+    "gulp-minify-css": "^0.3.8",
+    "gulp-mocha": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-util": "^3.0.1",
+    "jshint-stylish": "^0.4.0",
+    "node-sass": "^0.9.3",
+    "normalize.css": "^3.0.1",
+    "vinyl": "^0.4.3"
+  }
+}

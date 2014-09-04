@@ -1,0 +1,137 @@
+// Color reset
+body {
+  color: $color-xdark;
+}
+a {
+  color: $color-link;
+  weight: 500;
+  transition: color $font-fade;
+
+  &:hover, &:focus {
+    color: $color-link-hover;
+  }
+}
+
+
+// Mixins for making the color sets
+@function color-invert($color) {
+  @if lightness($color) >= 70 {
+    @return $color-xdark;
+  } @else {
+    @return $color-xlight;
+  }
+}
+
+@mixin make-color-set($key, $color) {
+  .#{$prefix}fc-#{$key}, .#{$prefix}fc-hover-#{$key}:hover {
+    color: $color;
+  }
+  .#{$prefix}bg-#{$key}, .#{$prefix}bg-hover-#{$key}:hover {
+    background-color: $color;
+    color: color-invert($color);
+  }
+  .#{$prefix}bg-#{$key}-o-xlight {
+    background-color: rgba($color, $opacity-xlight);
+    color: color-invert($color);
+  }
+  .#{$prefix}bg-#{$key}-o-light {
+    background-color: rgba($color, $opacity-light);
+    color: color-invert($color);
+  }
+  .#{$prefix}bg-#{$key}-o-medium {
+    background-color: rgba($color, $opacity-medium);
+    color: color-invert($color);
+  }
+  .#{$prefix}bg-#{$key}-o-dark {
+    background-color: rgba($color, $opacity-dark);
+    color: color-invert($color);
+  }
+  .#{$prefix}bg-#{$key}-o-xdark {
+    background-color: rgba($color, $opacity-xdark);
+    color: color-invert($color);
+  }
+  .#{$prefix}b-#{$key}, .#{$prefix}b-hover-#{$key}, [class*="#{prefix}b-#{$key}"], .#{$prefix}hr-#{$key} {
+    border-color: $color;
+  }
+}
+
+
+// Primary color set
+@include make-color-set('primary',     $color-primary);
+
+// Black to White color sets
+@include make-color-set('white',       $color-white);
+@include make-color-set('xlight',      $color-xlight);
+@include make-color-set('light',       $color-light);
+@include make-color-set('medium',      $color-medium);
+@include make-color-set('dark',        $color-dark);
+@include make-color-set('xdark',       $color-xdark);
+@include make-color-set('black',       $color-black);
+
+// Swatch color sets
+@include make-color-set('swatchone',   $color-swatchone);
+@include make-color-set('swatchtwo',   $color-swatchtwo);
+@include make-color-set('swatchthree', $color-swatchthree);
+@include make-color-set('swatchfour',  $color-swatchfour);
+@include make-color-set('swatchfive',  $color-swatchfive);
+
+// Social network color sets
+@include make-color-set('facebook',    $color-facebook);
+@include make-color-set('twitter',     $color-twitter);
+@include make-color-set('google',      $color-google);
+@include make-color-set('linkedin',    $color-linkedin);
+@include make-color-set('pinterest',   $color-pinterest);
+@include make-color-set('whats-app',   $color-whats-app);
+
+// Application state colors
+@include make-color-set('success',     $color-success);
+@include make-color-set('error',       $color-error);
+
+
+// Color effects
+[class*='#{prefix}bg-hover-'] {
+  transition: background-color $background-fade;
+}
+[class*='#{prefix}fc-hover-'] {
+  transition: color $hover-fade;
+}
+
+
+// Opacity
+.#{$prefix}opacity-xlight {
+  opacity: $opacity-xlight;
+}
+.#{$prefix}opacity-light {
+  opacity: $opacity-light;
+}
+.#{$prefix}opacity-medium {
+  opacity: $opacity-medium;
+}
+.#{$prefix}opacity-dark {
+  opacity: $opacity-dark;
+}
+.#{$prefix}opacity-xdark {
+  opacity: $opacity-xdark;
+}
+.#{$prefix}opacity-full {
+  opacity: $opacity-full;
+}
+
+.#{$prefix}opacity-hover-xlight:hover {
+  opacity: $opacity-xlight;
+}
+.#{$prefix}opacity-hover-light:hover {
+  opacity: $opacity-light;
+}
+.#{$prefix}opacity-hover-medium:hover {
+  opacity: $opacity-medium;
+}
+.#{$prefix}opacity-hover-dark:hover {
+  opacity: $opacity-dark;
+}
+.#{$prefix}opacity-hover-xdark:hover {
+  opacity: $opacity-xdark;
+}
+.#{$prefix}opacity-hover-full:hover {
+  opacity: $opacity-full;
+}
