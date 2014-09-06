@@ -12,7 +12,7 @@ module.exports = function(grunt){
           autoprefixer: true,
           variables: './test/test_variables.scss',
         },
-        dest: './'
+        dest: __dirname + '/' + atomicity.file
       },
       dist: {
         options: {
@@ -20,7 +20,7 @@ module.exports = function(grunt){
           autoprefixer: true,
           variables: './test/test_variables.scss',
         },
-        dest: './'
+        dest: __dirname + '/' + atomicity.fileMin
       }
     }
   });

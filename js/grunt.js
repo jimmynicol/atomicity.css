@@ -2,13 +2,12 @@
 
 var fs     = require('fs'),
     render = require('./render'),
-    paths  = require('./paths'),
     pkg    = require('../package.json'),
     chalk  = require('chalk');
 
 
 module.exports = function(grunt){
-  var options, desc, css, file;
+  var options, desc, css;
 
   desc = 'Render ' + pkg.name + ' with options';
 
@@ -21,25 +20,14 @@ module.exports = function(grunt){
   grunt.registerMultiTask('atomicity', desc, function(){
     options = this.options({
       minify: false,
-      autoprefixer: true
+      autoprefixer: true,
+      silent: false
     });
 
     css = render(options);
 
-    if (this.options.minify){
-      file = paths.fileMin;
-    } else {
-      file = paths.file;
-    }
-
-    fs.writeFile(this.data.dest + file, css, function(err){
-      if(err){
-        throw new Error(err);
-      } else {
-        log('File ' + chalk.cyan(this.data.dest + file) + ' created.');
-      }
-    });
-
+    fs.writeFileSync(this.data.dest, css);
+    log('File ' + chalk.cyan(this.data.dest) + ' created.');
   });
 
 };

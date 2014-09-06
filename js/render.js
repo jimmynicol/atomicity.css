@@ -15,7 +15,7 @@ function getFile(path){
   if (!fs.existsSync(path)){
     throw new Error('Unable to find scss file: ' + path);
   }
-  return fs.readFileSync(path)
+  return fs.readFileSync(path);
 }
 
 function addBanner(css){
@@ -30,7 +30,7 @@ function addBanner(css){
 }
 
 module.exports = function(options){
-  var scss, css, banner;
+  var scss, css;
 
   scss = '';
   options = options || {};
