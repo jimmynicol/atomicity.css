@@ -30,7 +30,11 @@ gulp.task('lint:watch', ['lint'], function(){
 
 gulp.task('css', function () {
   atomicity
-    .gulp({ minify: false, autoprefixer: true })
+    .gulp({
+      minify: false,
+      autoprefixer: true,
+      variables: './test/test_variables.scss'
+    })
     .pipe(gulp.dest('.'))
     .pipe(rename(atomicity.fileMin))
     .pipe(minify())

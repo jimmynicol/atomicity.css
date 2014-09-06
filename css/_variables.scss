@@ -2,7 +2,7 @@
 // General
 // -------
 
-$prefix:          'f-' !default;
+$prefix:          'a-' !default; // useful when you need to namespace
 
 // -------
 // End General
@@ -124,7 +124,6 @@ $opacity-full:       1       !default;
 $font-fade:          150ms ease-in-out !default;
 $background-fade:    150ms ease-in-out !default;
 $hover-fade:         150ms ease-in-out !default;
-
 
 // -------
 // End Color

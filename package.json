@@ -1,5 +1,5 @@
 {
-  "name": "atomicity",
+  "name": "atomicity.css",
   "version": "0.0.1",
   "description": "Atomic CSS library, packaged for use with NPM, Grunt and Gulp",
   "main": "index.js",
