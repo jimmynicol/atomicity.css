@@ -10,7 +10,7 @@ var gulp      = require('gulp'),
     atomicity = require('./');
 
 
-gulp.task('lint', function () {
+gulp.task('lint', function() {
   gulp.src(['js/**/*.js', './*.js'])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter(stylish));
@@ -28,7 +28,7 @@ gulp.task('lint:watch', ['lint'], function(){
 });
 
 
-gulp.task('css', function () {
+gulp.task('css', function() {
   atomicity
     .gulp({
       minify: false,
@@ -41,5 +41,5 @@ gulp.task('css', function () {
     .pipe(gulp.dest('.'));
 });
 gulp.task('css:watch', ['css'], function(){
-  gulp.watch(['css/**/*.css'], ['css']);
+  gulp.watch(['css/**/*.scss'], ['css']);
 });
