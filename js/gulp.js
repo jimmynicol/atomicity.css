@@ -8,10 +8,10 @@ var stream = require('stream'),
     render = require('./render');
 
 
-function GulpRead(opts){
+function GulpSrc(opts){
   /* jshint validthis:true */
-  if (!(this instanceof GulpRead)){
-    return new GulpRead(opts);
+  if (!(this instanceof GulpSrc)){
+    return new GulpSrc(opts);
   }
 
   stream.Readable.call(this, { objectMode : true });
@@ -19,9 +19,9 @@ function GulpRead(opts){
   this.opts = opts || {};
   this.filePath = opts.file || paths.file;
 }
-util.inherits(GulpRead, stream.Readable);
+util.inherits(GulpSrc, stream.Readable);
 
-GulpRead.prototype._read = function(){
+GulpSrc.prototype._read = function(){
   var vinyl = new Vinyl({
     path: this.filePath,
     contents: new Buffer(render(this.opts))
@@ -32,8 +32,16 @@ GulpRead.prototype._read = function(){
 };
 
 
-var GulpTransform = function(opts){
+var GulpThrough = function(opts){
   return es.map(function(file, callback){
+    if (file.isNull()) {
+      return callback(null, file);
+    }
+    if (file.isStream()){
+      var Error = require('gulp-util').PluginError
+      return callback(null, new Error('Streaming not supported!'));
+    }
+
     var css = new Buffer(render(opts));
     file.contents = Buffer.concat([file.contents, css]);
     callback(null, file);
@@ -43,6 +51,6 @@ var GulpTransform = function(opts){
 
 
 module.exports = {
-  read: GulpRead,
-  through: GulpTransform
+  src: GulpSrc,
+  through: GulpThrough
 };

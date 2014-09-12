@@ -1,6 +1,6 @@
 'use strict';
 
-var atomicity = require('./');
+var atomicity = require('../');
 
 module.exports = function(grunt){
 
@@ -10,7 +10,7 @@ module.exports = function(grunt){
         options: {
           minify: false,
           autoprefixer: true,
-          variables: './test/test_variables.scss',
+          variables: './css/test_variables.scss',
         },
         dest: __dirname + '/' + atomicity.file
       },
@@ -18,7 +18,7 @@ module.exports = function(grunt){
         options: {
           minify: true,
           autoprefixer: true,
-          variables: './test/test_variables.scss',
+          variables: './css/test_variables.scss',
         },
         dest: __dirname + '/' + atomicity.fileMin
       }

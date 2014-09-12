@@ -30,7 +30,7 @@ gulp.task('lint:watch', ['lint'], function(){
 
 gulp.task('css', function() {
   atomicity.gulp
-    .read({
+    .src({
       minify: false,
       autoprefixer: true
     })

@@ -2,15 +2,25 @@
 
 var gulp      = require('gulp'),
     atomicity = require('../'),
-    opts      = { minify: false, autoprefixer: true };
+    opts      = { autoprefixer: true };
 
 
-// Simple rendering of the Atomicity CSS as the initiating stream
+// Simple rendering of the Atomicity CSS as the source stream
 gulp.task('simple', function(){
   atomicity
-    .gulp.read(opts)
+    .gulp.src(opts)
     .pipe(gulp.dest('.'));
 });
+
+
+// Simple rendering of the Atomicity CSS with custom variables
+gulp.task('variables', function(){
+  opts.variables = './css/test_variables.scss';
+  atomicity
+    .gulp.src(opts)
+    .pipe(gulp.dest('.'));
+});
+
 
 // Pipe an existing stream of CSS through Atomicity
 gulp.task('pipe', function(){

@@ -56,7 +56,7 @@ module.exports = function(options){
     ) + css;
   }
 
-  // add vendor prefixes is requested
+  // add vendor prefixes if requested
   if (options.autoprefixer){
     var opts = {
       browsers: options.autoprefixer.browsers || autoprefixer.default.browsers,
