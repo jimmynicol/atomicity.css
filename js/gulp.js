@@ -1,29 +1,29 @@
 'use strict';
 
 var stream = require('stream'),
+    es     = require('event-stream'),
     util   = require('util'),
     Vinyl  = require('vinyl'),
     paths  = require('./paths'),
     render = require('./render');
 
 
-function GulpStream(opts){
+function GulpRead(opts){
   /* jshint validthis:true */
-  if (!(this instanceof GulpStream)){
-    return new GulpStream(opts);
+  if (!(this instanceof GulpRead)){
+    return new GulpRead(opts);
   }
 
   stream.Readable.call(this, { objectMode : true });
 
   this.opts = opts || {};
-  this.file = opts.file || paths.file;
+  this.filePath = opts.file || paths.file;
 }
+util.inherits(GulpRead, stream.Readable);
 
-util.inherits(GulpStream, stream.Readable);
-
-GulpStream.prototype._read = function(){
+GulpRead.prototype._read = function(){
   var vinyl = new Vinyl({
-    path: this.file,
+    path: this.filePath,
     contents: new Buffer(render(this.opts))
   });
 
@@ -32,4 +32,17 @@ GulpStream.prototype._read = function(){
 };
 
 
-module.exports = GulpStream;
+var GulpTransform = function(opts){
+  return es.map(function(file, callback){
+    var css = new Buffer(render(opts));
+    file.contents = Buffer.concat([file.contents, css]);
+    callback(null, file);
+  });
+};
+
+
+
+module.exports = {
+  read: GulpRead,
+  through: GulpTransform
+};

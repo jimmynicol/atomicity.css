@@ -16,9 +16,9 @@ a {
 // Mixins for making the color sets
 @function color-invert($color) {
   @if lightness($color) >= 70 {
-    @return $color-xdark;
+    @return $color-black;
   } @else {
-    @return $color-xlight;
+    @return $color-white;
   }
 }
 

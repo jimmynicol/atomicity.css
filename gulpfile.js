@@ -29,11 +29,10 @@ gulp.task('lint:watch', ['lint'], function(){
 
 
 gulp.task('css', function() {
-  atomicity
-    .gulp({
+  atomicity.gulp
+    .read({
       minify: false,
-      autoprefixer: true,
-      variables: './test/test_variables.scss'
+      autoprefixer: true
     })
     .pipe(gulp.dest('.'))
     .pipe(rename(atomicity.fileMin))
@@ -42,4 +41,31 @@ gulp.task('css', function() {
 });
 gulp.task('css:watch', ['css'], function(){
   gulp.watch(['css/**/*.scss'], ['css']);
+});
+
+
+/**
+Development server and livereload for the sample app
+*/
+var opnr = require('open'),
+    connect = require('gulp-connect'),
+    port = 4444;
+
+gulp.task('server', function() {
+  connect.server({
+    root: './',
+    port: port,
+    livereload: { port: port + 1 }
+  });
+  opnr('http://localhost:' + port);
+});
+
+gulp.task('watch', ['server'], function(){
+  gulp.watch(
+    ['./*.html', 'css/*.scss'],
+    function(event){
+      util.log('file changed:', util.colors.green(event.path));
+      gulp.src(event.path)
+        .pipe(connect.reload());
+    });
 });
