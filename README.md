@@ -1,6 +1,6 @@
 # Atomicity.css
 
-A WORK IN PROGRESS
+A WORK IN PROGRESS - NOT PUBLISHED TO NPM YET...
 
 
 Minimal CSS library using atomic css principles where a single class selector does one specific task.
@@ -8,7 +8,7 @@ Minimal CSS library using atomic css principles where a single class selector do
 
 ## Build Tool Integration
 
-This project includes integrations with both [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/).
+This project includes integrations with both [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/). Examples of these integrations can be found in `/examples`.
 
 
 ### Gulp
@@ -20,9 +20,8 @@ This project includes integrations with both [Gulp](http://gulpjs.com/) and [Gru
         minify = require('gulp-minify');
 
     gulp.task('css', function () {
-      atomicity
-        .gulp({
-          minify: false,
+      atomicity.gulp
+        .src({
           autoprefixer: true,
           variables: '/path/to/my_variables.scss'
         })
@@ -35,9 +34,20 @@ This project includes integrations with both [Gulp](http://gulpjs.com/) and [Gru
       gulp.watch(['css/**/*.scss'], ['css']);
     });
 
+You can also use the gulp connector as a through stream as well, if you have other CSS you would like to append before Atomicity.
+
+    gulp.task('css', function () {
+      gulp.src(['/path/to/my.css'])
+        .pipe(atomicity.gulp.through({
+          autoprefixer: true,
+          variables: '/path/to/my_variables.scss'
+        }))
+        .pipe(gulp.dest('.'));
+    });
+
 
 ### Grunt
-[Grunt](http://gruntjs.com/) is a task runner that allows you to build up config files to build out your assets. Atomicity creates a multiTask so you can configure any number of different permutations. Below are two tasks one for development and one for a production distribution.
+[Grunt](http://gruntjs.com/) is a task runner that allows you to build up config files to build out your assets. Atomicity creates a multiTask so you can configure any number of different permutations. Below are two tasks: one for development and one for a production distribution.
 
     var atomicity = require('./');
 
