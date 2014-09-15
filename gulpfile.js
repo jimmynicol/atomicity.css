@@ -35,7 +35,7 @@ gulp.task('css', function() {
       autoprefixer: true
     })
     .pipe(gulp.dest('.'))
-    .pipe(rename(atomicity.fileMin))
+    .pipe(rename(atomicity.file.replace('.css', '.min.css')))
     .pipe(minify())
     .pipe(gulp.dest('.'));
 });
